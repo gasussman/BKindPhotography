@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html data-ng-app="BKind">
+  <head>
+    <title>Bloc Jams</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.17.1/build/cssreset/cssreset-min.css">
+     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
+     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
+     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+     <script src="/javascripts/vendor.js"></script>
+     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
+     <script src="/javascripts/app.js"></script>
+     <script>
+       require('scripts/app');
+     </script>
+  </head>
+   <body>   
+     <nav class="player-header-nav navbar">
+      <div class="container-fluid"><!-- Nav Bar -->
+         <div class='navbar-header col-sm-12'>
+              <a ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed" class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="fa fa-navicon fa-3x"></span>
+              </a>
+              
+              <a ui-sref='landing' class='logo navbar-left'>
+                <img src="/images/blocjams.png">
+              </a>
+
+      
+
+              <div class="collapse navbar-collapse nav">
+                  <ul class='nav navbar-nav navbar-right'>
+                      <li><a ui-sref='collection'>Library</a></li>
+                      <li><a ui-sref='album'>Album</a></li>
+                      <li><a ui-sref='song'>Profile</a></li>
+                  </ul>
+              </div>
+           </div>
+       </div>
+  </nav> 
+    <!-- Render templates here -->
+     <div ui-view></div>
+  </body> 
+</html>
