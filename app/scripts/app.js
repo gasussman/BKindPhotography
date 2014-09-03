@@ -14,15 +14,17 @@ bKind = angular.module('bKind', ['ui.router']);
  bKind.controller('Landing.controller', ['$scope', function($scope) {
 
   $scope.albumURLs = [
-     '/images/album-1.jpg',
-     '/images/album-2.jpg',
-     '/images/album-3.jpg',
-     '/images/album-4.jpg',
-     '/images/album-5.jpg',
-     '/images/album-6.jpg',
-     '/images/album-7.jpg',
-     '/images/album-8.jpg',
-     '/images/album-9.jpg',
+     '/images/picture_1.jpg',
+     '/images/picture_2.jpg',
+     '/images/picture_3.jpg',
+     '/images/picture_4.jpg',
+     '/images/picture_5.jpg',
+     '/images/picture_6.jpg',
+     '/images/picture_7.jpg',
+     '/images/picture_8.jpg',
+     '/images/picture_9.jpg',
+     '/images/picture_10.jpg',
+     '/images/picture_11.jpg',
    ];
 
    $scope.shuffle = function(albumURLs) { //v1.0
