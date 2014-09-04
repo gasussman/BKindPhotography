@@ -1,30 +1,30 @@
 bKind = angular.module('bKind', ['ui.router']);
  
- bKind.config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) {
+bKind.config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) {
    $locationProvider.html5Mode(true);
 
    $stateProvider.state('landing', {
      url: '/',
-     templateUrl: 'templates/landing.html',
+     templateUrl: 'app/assets/templates/landing.html',
      controller: 'Landing.controller'
    });
 
-   }]);
+}]);
 
  bKind.controller('Landing.controller', ['$scope', function($scope) {
 
   $scope.albumURLs = [
-     '/images/picture_1.jpg',
-     '/images/picture_2.jpg',
-     '/images/picture_3.jpg',
-     '/images/picture_4.jpg',
-     '/images/picture_5.jpg',
-     '/images/picture_6.jpg',
-     '/images/picture_7.jpg',
-     '/images/picture_8.jpg',
-     '/images/picture_9.jpg',
-     '/images/picture_10.jpg',
-     '/images/picture_11.jpg',
+     'app/assets/images/picture_1.jpg',
+     'app/assets/images/picture_2.jpg',
+     'app/assets/images/picture_3.jpg',
+     'app/assets/images/picture_4.jpg',
+     'app/assets/images/picture_5.jpg',
+     'app/assets/images/picture_6.jpg',
+     'app/assets/images/picture_7.jpg',
+     'app/assets/images/picture_8.jpg',
+     'app/assets/images/picture_9.jpg',
+     'app/assets/images/picture_10.jpg',
+     'app/assets/images/picture_11.jpg'
    ];
 
    $scope.shuffle = function(albumURLs) { //v1.0
