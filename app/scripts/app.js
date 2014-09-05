@@ -24,7 +24,8 @@ bKind.config(['$stateProvider', '$locationProvider', function($stateProvider, $l
      'app/assets/images/picture_8.jpg',
      'app/assets/images/picture_9.jpg',
      'app/assets/images/picture_10.jpg',
-     'app/assets/images/picture_11.jpg'
+     'app/assets/images/picture_11.jpg',
+     'app/assets/images/picture_12.jpg'
    ];
 
    $scope.shuffle = function(albumURLs) { //v1.0

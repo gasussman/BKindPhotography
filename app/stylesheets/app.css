@@ -1,1 +1,74 @@
-// comment for testing
+html {
+    height: 100%;
+  }
+
+  body {
+    min-height: 100%;
+    padding-bottom: 150px;
+  }
+
+@font-face {
+    font-family: "Peaches";
+    src: url("/app/assets/fonts/PeachesAndCream_Regular.otf") format("opentype");
+}
+
+h1 {
+  font-family: "Peaches";
+  font-size: 120px;
+}
+
+h2 {
+  font-family: "Peaches";
+  font-size: 90px;
+  padding-left: 50px;
+  margin-top: -30px;
+}
+
+h3 {
+  font-family: "Peaches";
+  font-size: 50px;
+}
+
+.player-header-nav {
+  background-color: rgba(0, 0, 0, .9);
+  height: 75px;
+}
+    a {
+      margin-top: -30px;
+      line-height: 45px;
+      color: white;
+      letter-spacing: 1.2;
+      overflow: hidden;
+ 
+      &:hover {
+         color: rgba(0, 0, 0, .9);
+      }
+    }
+  }
+
+.wrapper {
+      position: default !important;
+      padding: 0 !important;
+      margin: 0;
+      }
+
+.pics {
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.pics:hover {
+  -webkit-transition-duration: .5s;
+  -webkit-transform: scale(1.5);
+  z-index: 10;
+}
+
+
+.basil:hover { 
+  -webkit-transition-duration: 30s;
+  -webkit-transform: translate(80px,-300px) scale(.01);
+  -moz-transform: translate(80px,-300px) scale(.01);
+  transform: translate(80px,-300px) scale(.01);
+}
