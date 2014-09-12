@@ -29,6 +29,8 @@ bKind.config(['$stateProvider', '$locationProvider', function($stateProvider, $l
 
 }]);
 
+ bKind.controller('Landing.controller', ['$scope', function($scope) {}])
+
  bKind.controller('Portfolio.controller', ['$scope', function($scope) {
 
     $(function() {
