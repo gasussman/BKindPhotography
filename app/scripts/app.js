@@ -5,8 +5,8 @@ bKind.config(['$stateProvider', '$locationProvider', function($stateProvider, $l
 
    $stateProvider.state('landing', {
      url: '/',
-     templateUrl: 'app/assets/templates/landing.html',
-     controller: 'Landing.controller'
+     templateUrl: 'app/assets/templates/landing.html'
+     
    });
 
    $stateProvider.state('portfolio', {
@@ -31,7 +31,7 @@ bKind.config(['$stateProvider', '$locationProvider', function($stateProvider, $l
 
  bKind.controller('Portfolio.controller', ['$scope', function($scope) {
 
-    $(function() {
+    scope.main = $(function() {
       
         $( '#ri-grid' ).gridrotator( {
           rows    : 3,

@@ -10,41 +10,42 @@ html {
 
   .player-header-nav {
   background-color: #201013;
-  z-index: 10;
+  margin: 0;
+  border-radius: 0;
 }
 
 .navbar-nav a {
-      line-height: 15px;
-      color: #96daf4;
+      line-height: 50px;
+      color: white;
       letter-spacing: 1.2;
     }
  
   .navbar-nav a:hover {
-         color: #201013;
+         color: white;
          background-color: #96daf4 !important;
       }
 
   .navbar-brand {
-    margin-top: -8px;
     color: #96daf4;
+    height: auto;
   }
 
   .navbar-brand:hover {
   background-color: #96daf4;
-  color: #201013;
+  color: white;
 }
 
 .bg img {
   /* Set rules to fill background */
-  max-height: 100%;
   
   
   /* Set up proportionate scaling */
-  min-width: 100%;
+  width: 100%;
   
   /* Set up positioning */
   position: fixed;
-  top: 50px;
+  padding-top: 0;
+  margin-top: 0;
   right: 0;
 }
 
@@ -74,10 +75,11 @@ html {
 
 h1 {
   font-family: "Peaches";
-  line-height: 0px;
-  color: #96daf4;
+  font-size: 50px;
+  color: white;
   letter-spacing: 1.2;
   text-align: center;
+  margin: 0;
 }
 
 h1:hover {
@@ -86,11 +88,10 @@ h1:hover {
 }
 
 h2 {
-  font-family: "Peaches";
-  font-size: 80px;
+  font-family: "Open Sans Condensed";
+  font-size: 30px;
   text-align: center;
   color: rgba(255, 255, 255, 1);
-  margin-top: -30px;
 }
 
 h3 {
@@ -149,6 +150,10 @@ p {
 
 @media screen and (min-width: 769px) {
 
+  .navbar-header {
+    height: 85px;
+  }
+
   .navbar-header .btn-navbar {
       display: none;
     }
@@ -170,8 +175,23 @@ p {
 
   /* Landing Page and Global Styles */
 .fa-navicon {
-  color: #96daf4;
+  color: white;
   margin-top: 8px;
+}
+
+.bg img {
+  /* Set rules to fill background */
+  
+  
+  
+  /* Set up proportionate scaling */
+  width: 100%;
+  
+  /* Set up positioning */
+  position: fixed;
+  padding-top: 0;
+  margin-top: 0;
+  right: 0;
 }
   
 }
