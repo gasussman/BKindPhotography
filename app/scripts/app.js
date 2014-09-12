@@ -29,27 +29,23 @@ bKind.config(['$stateProvider', '$locationProvider', function($stateProvider, $l
 
 }]);
 
+ bKind.controller('Landing.controller', ['$scope', function($scope) {}])
+
  bKind.controller('Portfolio.controller', ['$scope', function($scope) {
 
-    scope.main = $(function() {
-      
-        $( '#ri-grid' ).gridrotator( {
-          rows    : 3,
-          columns   : 15,
-          animType  : 'fadeInOut',
-          animSpeed : 1000,
-          interval  : 600,
-          step    : 1,
-          w320    : {
-            rows  : 3,
-            columns : 4
-          },
-          w240    : {
-            rows  : 3,
-            columns : 4
-          }
-        } );
-      
-      });
-
+   $( '#ri-grid' ).gridrotator( {
+     animType  : 'fadeInOut',
+     animSpeed : 1000,
+     interval  : 600,
+     step    : 1,
+     w320    : {
+       rows  : 3,
+     columns : 4
+     },
+     w240    : {
+       rows  : 3,
+     columns : 4
+     }
+   } );
  }]);
+>>>>>>> 72d70ea9f584ce639925015715aff635fef7e176
