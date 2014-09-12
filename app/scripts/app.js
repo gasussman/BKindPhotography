@@ -9,28 +9,47 @@ bKind.config(['$stateProvider', '$locationProvider', function($stateProvider, $l
      controller: 'Landing.controller'
    });
 
+   $stateProvider.state('portfolio', {
+     url: '/portfolio',
+     templateUrl: '/app/assets/templates/portfolio.html',
+     controller: 'Portfolio.controller'
+   })
+
+   $stateProvider.state('aboutme', {
+     url: '/',
+     templateUrl: 'app/assets/templates/aboutme.html',
+     controller: 'Aboutme.controller'
+   });
+
+   $stateProvider.state('contact', {
+     url: '/',
+     templateUrl: 'app/assets/templates/contact.html',
+     controller: 'Contact.controller'
+   });
+
 }]);
 
- bKind.controller('Landing.controller', ['$scope', function($scope) {
+ bKind.controller('Portfolio.controller', ['$scope', function($scope) {
 
-  $scope.albumURLs = [
-     'app/assets/images/picture_1.jpg',
-     'app/assets/images/picture_2.jpg',
-     'app/assets/images/picture_3.jpg',
-     'app/assets/images/picture_4.jpg',
-     'app/assets/images/picture_5.jpg',
-     'app/assets/images/picture_6.jpg',
-     'app/assets/images/picture_7.jpg',
-     'app/assets/images/picture_8.jpg',
-     'app/assets/images/picture_9.jpg',
-     'app/assets/images/picture_10.jpg',
-     'app/assets/images/picture_11.jpg',
-     'app/assets/images/picture_12.jpg'
-   ];
-
-   $scope.shuffle = function(albumURLs) { //v1.0
-    for(var j, x, i = $scope.albumURLs.length; i; j = Math.floor(Math.random() * i), x = $scope.albumURLs[--i], $scope.albumURLs[i] = $scope.albumURLs[j], $scope.albumURLs[j] = x);
-    return $scope.albumURLs;
-    };
+    $(function() {
+      
+        $( '#ri-grid' ).gridrotator( {
+          rows    : 3,
+          columns   : 15,
+          animType  : 'fadeInOut',
+          animSpeed : 1000,
+          interval  : 600,
+          step    : 1,
+          w320    : {
+            rows  : 3,
+            columns : 4
+          },
+          w240    : {
+            rows  : 3,
+            columns : 4
+          }
+        } );
+      
+      });
 
  }]);

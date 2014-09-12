@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html ng-app="bKind">
+<html data-ng-app="bKind">
   <head>
     <title>Bkind Photography</title>
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans'>
     <link rel="stylesheet" href="app/stylesheets/app.css">
+    <link rel="stylesheet" href="app/stylesheets/style.css">
     <script src="//localhost:35729/livereload.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
     <script src="app/scripts/app.js"></script>
   </head>
    <body>   
@@ -17,24 +20,23 @@
       <div class="container-fluid"><!-- Nav Bar -->
          <div class='navbar-header col-sm-12'>
               <a ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed" class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="fa fa-navicon fa-3x"></span>
+                <span class="fa fa-navicon fa-2x"></span>
               </a>
-
-              <a ui-sref='landing' class='logo navbar-left'>
-                <h3>B</h3>
-              </a>
-
+              <a class="navbar-brand" ui-sref="landing"><h1>Bkind Photography</h1></a>
               <div class="collapse navbar-collapse nav">
                   <ul class='nav navbar-nav navbar-right'>
-                      <li><a href='https://www.facebook.com/bkindphoto'><span class="fa fa-facebook-square fa-3x"></span></a></li>
-                      <li><a ui-sref='album'><span class="fa fa-twitter fa-3x"></span></a></li>
-                      <li><a href='https://instagram.com/bkindphoto'><span class="fa fa-instagram fa-3x"></span></a></li>
+                      <li><a ui-sref="portfolio"><h1>Portfolio</h1></a></li>
+                      <li><a ui-sref="aboutme"><h1>About Me</h1></a></li>
+                      <li><a ui-sref="contact"><h1>Contact</h1></a></li>
+                      <li><a href='https://www.facebook.com/bkindphoto'><span class="fa fa-facebook-square fa-2x"></span></a></li>
+                      <li><a href='#'><span class="fa fa-twitter fa-2x"></span></a></li>
+                      <li><a href='https://instagram.com/bkindphoto'><span class="fa fa-instagram fa-2x"></span></a></li>
                   </ul>
               </div>
-           </div>
-       </div>
+          </div>
+        </div>
   </nav> 
     <!-- Render templates here -->
      <div ui-view></div>
-  </body> 
+  </body>
 </html>

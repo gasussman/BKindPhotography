@@ -4,23 +4,92 @@ html {
 
   body {
     min-height: 100%;
-    padding-bottom: 150px;
+    background-color: #96daf4;
+   
   }
+
+  .player-header-nav {
+  background-color: #201013;
+  z-index: 10;
+}
+
+.navbar-nav a {
+      line-height: 15px;
+      color: #96daf4;
+      letter-spacing: 1.2;
+    }
+ 
+  .navbar-nav a:hover {
+         color: #201013;
+         background-color: #96daf4 !important;
+      }
+
+  .navbar-brand {
+    margin-top: -8px;
+    color: #96daf4;
+  }
+
+  .navbar-brand:hover {
+  background-color: #96daf4;
+  color: #201013;
+}
+
+.bg img {
+  /* Set rules to fill background */
+  max-height: 100%;
+  
+  
+  /* Set up proportionate scaling */
+  min-width: 100%;
+  
+  /* Set up positioning */
+  position: fixed;
+  top: 50px;
+  right: 0;
+}
+
+.corey img {
+  max-width: 75%;
+  border-radius: 50%;
+  margin-top: 50%;
+}
+
+.description {
+  padding: 0 5%;
+  margin-top: 10%;
+}
 
 @font-face {
     font-family: "Peaches";
     src: url("/app/assets/fonts/PeachesAndCream_Regular.otf") format("opentype");
 }
 
+.wrap {
+  border: 1px solid rgba(255, 255, 255, .75);
+  border-radius: 50%;
+  padding: 60px;
+  margin-top: 20px;
+  margin-left: 75%;
+}
+
 h1 {
   font-family: "Peaches";
-  font-size: 120px;
+  line-height: 0px;
+  color: #96daf4;
+  letter-spacing: 1.2;
+  text-align: center;
+}
+
+h1:hover {
+  background-color: #d2d6c8;
+  color: #201013;
 }
 
 h2 {
   font-family: "Peaches";
-  font-size: 90px;
-  padding-left: 50px;
+  font-size: 80px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
   margin-top: -30px;
 }
 
@@ -29,34 +98,28 @@ h3 {
   font-size: 50px;
 }
 
-.player-header-nav {
-  background-color: rgba(0, 0, 0, .9);
-  height: 75px;
+p {
+  font-family: 'Open Sans';
+  font-size: 20px;
 }
-    a {
-      margin-top: -30px;
-      line-height: 45px;
-      color: white;
-      letter-spacing: 1.2;
-      overflow: hidden;
- 
-      &:hover {
-         color: rgba(0, 0, 0, .9);
-      }
-    }
-  }
 
-.wrapper {
-      position: default !important;
-      padding: 0 !important;
-      margin: 0;
-      }
+
 
 .pics {
-  height: 200px;
-  width: 200px;
-  overflow: hidden;
-  z-index: 1;
+  min-height: 100%;
+  min-width: 2848px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+   top: 0;
+  left: 0;
+}
+
+.contact-wrapper {
+  min-height: 100%;
+  background-color: #96daf4;
+  padding: 0;
+  margin: 0;
 }
 
 .pics:hover {
@@ -65,10 +128,50 @@ h3 {
   z-index: 10;
 }
 
+.basil {
+  bottom: 0;
+  margin-left: 50%;
+}
 
 .basil:hover { 
   -webkit-transition-duration: 30s;
   -webkit-transform: translate(80px,-300px) scale(.01);
   -moz-transform: translate(80px,-300px) scale(.01);
   transform: translate(80px,-300px) scale(.01);
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.bg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+@media screen and (min-width: 769px) {
+
+  .navbar-header .btn-navbar {
+      display: none;
+    }
+  .navbar-header li {
+      display: block;
+    }
+  }
+
+
+@media screen and (max-width: 768px) {
+
+   .btn-navbar {
+    height: 50px;
+    width: 50px;
+    float: right;
+    display: block;
+    text-align: center;
+   }
+
+  /* Landing Page and Global Styles */
+.fa-navicon {
+  color: #96daf4;
+  margin-top: 8px;
+}
+  
 }
