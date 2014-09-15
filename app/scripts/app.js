@@ -49,15 +49,15 @@ bKind.config(['$stateProvider', '$locationProvider', function($stateProvider, $l
    } );
 
    $scope.imageURLs = [
-     'app/assets/images/picture_1.JPG',
-     '/app/assets/images/picture_2.JPG',
-     '/app/assets/images/picture_3.JPG',
-     '/app/assets/images/picture_4.JPG',
-     '/app/assets/images/picture_5.JPG',
-     '/app/assets/images/picture_6.JPG',
-     '/app/assets/images/picture_7.JPG',
-     '/app/assets/images/picture_8.JPG',
-     '/app/assets/images/picture_9.JPG',
+     'app/assets/images/picture_1.jpg',
+     '/app/assets/images/picture_2.jpg',
+     '/app/assets/images/picture_3.jpg',
+     '/app/assets/images/picture_4.jpg',
+     '/app/assets/images/picture_5.jpg',
+     '/app/assets/images/picture_6.jpg',
+     '/app/assets/images/picture_7.jpg',
+     '/app/assets/images/picture_8.jpg',
+     '/app/assets/images/picture_9.jpg',
    ];
  }]);
 
