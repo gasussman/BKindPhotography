@@ -5,8 +5,7 @@ bKind.config(['$stateProvider', '$locationProvider', function($stateProvider, $l
 
    $stateProvider.state('landing', {
      url: '/',
-     templateUrl: 'app/assets/templates/landing.html'
-     
+     templateUrl: 'app/assets/templates/landing.html'   
    });
 
    $stateProvider.state('portfolio', {
@@ -16,15 +15,13 @@ bKind.config(['$stateProvider', '$locationProvider', function($stateProvider, $l
    })
 
    $stateProvider.state('aboutme', {
-     url: '/',
+     url: '/aboutme',
      templateUrl: 'app/assets/templates/aboutme.html',
-     controller: 'Aboutme.controller'
    });
 
    $stateProvider.state('contact', {
-     url: '/',
-     templateUrl: 'app/assets/templates/contact.html',
-     controller: 'Contact.controller'
+     url: '/contact',
+     templateUrl: 'app/assets/templates/contact.html'
    });
 
 }]);
@@ -34,10 +31,12 @@ bKind.config(['$stateProvider', '$locationProvider', function($stateProvider, $l
  bKind.controller('Portfolio.controller', ['$scope', function($scope) {
 
    $( '#ri-grid' ).gridrotator( {
+     rows      : 3,
+     columns   : 15,
      animType  : 'fadeInOut',
      animSpeed : 1000,
      interval  : 600,
-     step    : 1,
+     step      : 5,
      w320    : {
        rows  : 3,
      columns : 4
@@ -45,7 +44,25 @@ bKind.config(['$stateProvider', '$locationProvider', function($stateProvider, $l
      w240    : {
        rows  : 3,
      columns : 4
-     }
+     },
+     onhover : true
    } );
+
+   $scope.imageURLs = [
+     'app/assets/images/picture_1.JPG',
+     '/app/assets/images/picture_2.JPG',
+     '/app/assets/images/picture_3.JPG',
+     '/app/assets/images/picture_4.JPG',
+     '/app/assets/images/picture_5.JPG',
+     '/app/assets/images/picture_6.JPG',
+     '/app/assets/images/picture_7.JPG',
+     '/app/assets/images/picture_8.JPG',
+     '/app/assets/images/picture_9.JPG',
+   ];
  }]);
->>>>>>> 72d70ea9f584ce639925015715aff635fef7e176
+
+ 
+
+
+
+
