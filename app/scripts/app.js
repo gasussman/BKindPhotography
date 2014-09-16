@@ -52,16 +52,16 @@ bKind.config(['$stateProvider', '$locationProvider', function($stateProvider, $l
    $scope.myInterval = 5000;
     var slides = $scope.slides;
 
-   $scope.slides = [
-     'app/assets/images/picture_11.jpg',
-     'app/assets/images/picture_12.jpg',
-     'app/assets/images/picture_13.jpg',
-     'app/assets/images/picture_14.jpg',
-     'app/assets/images/picture_15.jpg',
-     'app/assets/images/picture_16.jpg',
-     'app/assets/images/picture_17.jpg',
-     'app/assets/images/picture_18.jpg',
-     'app/assets/images/picture_19.jpg'
+   $scope.imageURLs = [
+     'app/assets/images/picture_1.jpg',
+     '/app/assets/images/picture_2.jpg',
+     '/app/assets/images/picture_3.jpg',
+     '/app/assets/images/picture_4.jpg',
+     '/app/assets/images/picture_5.jpg',
+     '/app/assets/images/picture_6.jpg',
+     '/app/assets/images/picture_7.jpg',
+     '/app/assets/images/picture_8.jpg',
+     '/app/assets/images/picture_9.jpg',
    ];
  }]);
 
