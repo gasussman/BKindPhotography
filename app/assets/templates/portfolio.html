@@ -55,21 +55,15 @@
 </div>
 
 <div class="image-wrapper">
-    <div ng-controller="Portfolio.controller" class='image-section'>
-        <div class='container'>
-            <div class='row'>
-                <div class='picture-controls col-md-3 col-xs-12'>
-                    <a class='previous' ng-click="Portfolio.previousImage()">
-                        <i class='fa fa-backward'></i>
-                    </a>
-                  <img class="image-cover" ng-src="{{imageURLs}}">
-                    <a class='next' ng-click="Portfolio.nextImage()">
-                        <i class='fa fa-forward'></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div ng-controller="Portfolio.controller">
+  <div style="height: 305px">
+    <carousel class='slider' interval="myInterval">
+      <slide class='slider2' ng-repeat="slide in slides">
+            <img ng-src="{{slide}}" style="margin:auto; width: 100%; height: auto;">
+      </slide>
+    </carousel>
+  </div>
+</div>
 </div>
 
 

@@ -1,4 +1,4 @@
-bKind = angular.module('bKind', ['ui.router']);
+bKind = angular.module('bKind', ['ui.router', 'ui.bootstrap', 'ui.config']);
  
 bKind.config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) {
    $locationProvider.html5Mode(true);
@@ -17,6 +17,7 @@ bKind.config(['$stateProvider', '$locationProvider', function($stateProvider, $l
    $stateProvider.state('aboutme', {
      url: '/aboutme',
      templateUrl: 'app/assets/templates/aboutme.html',
+     controller: 'Aboutme.controller'
    });
 
    $stateProvider.state('contact', {
@@ -31,36 +32,50 @@ bKind.config(['$stateProvider', '$locationProvider', function($stateProvider, $l
  bKind.controller('Portfolio.controller', ['$scope', function($scope) {
 
    $( '#ri-grid' ).gridrotator( {
-     rows      : 3,
+     rows      : 2,
      columns   : 15,
      animType  : 'fadeInOut',
      animSpeed : 1000,
      interval  : 600,
      step      : 5,
      w320    : {
-       rows  : 3,
-     columns : 4
+       rows  : 2,
+     columns : 5
      },
      w240    : {
-       rows  : 3,
-     columns : 4
+       rows  : 2,
+     columns : 5
      },
      onhover : true
    } );
 
-   $scope.imageURLs = [
-     'app/assets/images/picture_1.JPG',
-     '/app/assets/images/picture_2.JPG',
-     '/app/assets/images/picture_3.JPG',
-     '/app/assets/images/picture_4.JPG',
-     '/app/assets/images/picture_5.JPG',
-     '/app/assets/images/picture_6.JPG',
-     '/app/assets/images/picture_7.JPG',
-     '/app/assets/images/picture_8.JPG',
-     '/app/assets/images/picture_9.JPG',
+   $scope.myInterval = 5000;
+    var slides = $scope.slides;
+
+   $scope.slides = [
+     'app/assets/images/picture_11.jpg',
+     'app/assets/images/picture_12.jpg',
+     'app/assets/images/picture_13.jpg',
+     'app/assets/images/picture_14.jpg',
+     'app/assets/images/picture_15.jpg',
+     'app/assets/images/picture_16.jpg',
+     'app/assets/images/picture_17.jpg',
+     'app/assets/images/picture_18.jpg',
+     'app/assets/images/picture_19.jpg'
    ];
  }]);
 
+bKind.controller('Aboutme.controller', function($scope) {
+
+  $scope.presidentPic = false;
+  
+});
+
+$(document).ready(function () {
+  $(".navbar-nav li a").click(function(event) {
+    $(".navbar-collapse").collapse('hide');
+  });
+});
  
 
 
