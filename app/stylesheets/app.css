@@ -97,7 +97,7 @@ html {
 
 .bg img {
   /* Set rules to fill background */
-  
+  height: auto;
   
   /* Set up proportionate scaling */
   width: 100%;
@@ -110,7 +110,7 @@ html {
 }
 
 .portfolio-wrap {
-  padding-top: 2.5% !important;
+  padding-top: 10px !important;
   padding-bottom: 0 !important;
   background: white;
 }
@@ -126,7 +126,7 @@ html {
 
 .slider {
   width: 50%;
-  max-height: 300px;
+  max-height: 285px;
   margin-right: auto;
   margin-left: auto;
   box-shadow: 0px 2px 15px 3px rgba(0, 0, 0, .3);
@@ -134,7 +134,7 @@ html {
 
 .slider2 {
   width: 100%;
-  height: 300px;
+  height: 285px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -159,6 +159,22 @@ html {
 .highlight {
   background-color: rgba(216, 202, 191, .95);
   line-height: 15px;
+}
+
+.upward {
+  border-radius: 55%;
+  border: 1px solid white;
+  box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, .3);
+}
+
+.animate-enter {
+  -webkit-transition: 1s linear all; /* Chrome */
+  transition: 1s linear all;
+  opacity: 0;
+}
+
+.animate-enter.animate-enter-active {
+  opacity: 1;
 }
 
 @font-face {
@@ -296,6 +312,13 @@ form {
     clear: both;
     margin-left: -20px;
   }
+
+  .slider {
+  width: 100%;
+  max-height: 100px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 h2 {
    margin-right: auto;
