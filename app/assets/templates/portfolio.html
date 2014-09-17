@@ -42,12 +42,27 @@
 <div class="image-wrapper">
     <div ng-controller="Portfolio.controller">
   <div style="height: 305px">
-    <carousel class='slider' interval="myInterval">
+    <carousel class='slider' interval="myInterval" ng-click='showSlide()'>
       <slide class='slider2' ng-repeat="slide in slides">
             <img ng-src="{{slide}}" style="margin:auto; width: 100%; height: auto;">
       </slide>
     </carousel>
+
+   <!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      </div>
+      <div class="modal-body">
+      </div>
+    </div>
   </div>
+</div>
+</div>
 </div>
 </div>
 

@@ -144,6 +144,13 @@ html {
   visibility: hidden; 
 }
 
+
+
+.modal-dialog {
+  width: 100%;
+  padding: 10px;
+}
+
 .corey img {
   max-width: 100%;
   border-radius: 50%;
@@ -165,6 +172,9 @@ hr {
 
 p a {
   color: white;
+  padding-left: 8px;
+  padding-right: 3px;
+  margin: 0 5px;
   font-size: 22px;
   font-family: 'Open Sans';
   background-color: rgba(216, 202, 191, .95);
@@ -276,7 +286,7 @@ p {
   text-align: middle;
   margin-left: 20%;
   margin-right: 20%;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .form {
@@ -285,12 +295,20 @@ p {
 }
 
 form {
-  margin-top: 20px;
+  border: 1px solid white;
+  padding: 20px 40px 10% 40px;
+  border-radius: 5%;
 }
+
 
 .form-group label {
   font-family: "Open Sans Condensed";
   font-size: 24px;
+}
+
+.btn-primary {
+  font-family: 'Open Sans Condensed';
+  font-size: 20px;
 }
 
 .basil {

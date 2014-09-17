@@ -98,6 +98,15 @@ bKind.config(['$stateProvider', '$locationProvider', function($stateProvider, $l
      '/app/assets/images/basil_17.jpg',
      '/app/assets/images/basil_18.jpg'
    ];
+
+   $scope.showSlide = function () {
+      var src = $('.slider2.active img').attr("src");
+      var img= $('<img src="'  + src + '" >');
+      $('#myModal .modal-body').empty();
+      $('#myModal .modal-body').append(img);
+      $('#myModal').modal();
+   }
+
  }]);
 
 bKind.controller('Aboutme.controller', ['$scope', function($scope) {
@@ -113,6 +122,23 @@ $scope.basilPic = false;
 $scope.chickenPic = false;
 
 $scope.nostalgiaPic = false;
+
+}]);
+
+bKind.controller('Contact.controller', ['$scope', function($scope) {
+  $scope.myForm = {};
+  $scope.myForm.name = "name";
+  $scope.myForm.email  = "email";
+  $scope.myForm.message  = "message";
+
+  $scope.myForm.submitTheForm = function(item, event) {
+       console.log("--> Submitting form");
+       var dataObject = {
+          name : $scope.myForm.name,
+          email  : $scope.myForm.email,
+          message : $scope.myForm.message
+       };
+     };
 
 }]);
 
