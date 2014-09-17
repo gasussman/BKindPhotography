@@ -104,6 +104,16 @@ bKind.controller('Aboutme.controller', ['$scope', function($scope) {
 
 $scope.presidentPic = false;
 
+$scope.nateyPic = false;
+
+$scope.housePic = false;
+
+$scope.basilPic = false;
+
+$scope.chickenPic = false;
+
+$scope.nostalgiaPic = false;
+
 }]);
 
 $(document).ready(function () {

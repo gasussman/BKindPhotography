@@ -71,6 +71,7 @@ html {
   position: fixed;
   bottom: 0;
   background-color: #201013;
+  z-index: 100;
 }
 
 .footer-right li {
@@ -126,7 +127,7 @@ html {
 
 .slider {
   width: 50%;
-  max-height: 285px;
+  max-height: 275px;
   margin-right: auto;
   margin-left: auto;
   box-shadow: 0px 2px 15px 3px rgba(0, 0, 0, .3);
@@ -134,7 +135,7 @@ html {
 
 .slider2 {
   width: 100%;
-  height: 285px;
+  height: 275px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -144,25 +145,65 @@ html {
 }
 
 .corey img {
-  max-width: 75%;
+  max-width: 100%;
   border-radius: 50%;
   margin-top: 50%;
   border: 1px solid white;
   box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, .3);
 }
 
-.description {
-  padding: 0 5% 65px 5%;
-  margin-top: 10%;
+hr {
+  margin-left: 20%;
+  margin-right: 20%
 }
 
-.highlight {
+.description {
+  padding: 0 10% 65px 5%;
+  margin-top: 2%;
+  z-index: 1;
+}
+
+p a {
+  color: white;
+  font-size: 22px;
+  font-family: 'Open Sans';
   background-color: rgba(216, 202, 191, .95);
-  line-height: 15px;
+  text-decoration: none;
+  font-weight: 800;
+  box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, .3);
+}
+
+p a:hover {
+  color: white !important;
+  font-size: 30px;
+  font-family: 'Open Sans';
+  background-color: black;
+  text-decoration: none;
+  box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, .3);
+   -webkit-transition: all .5s linear;
+   -moz-transition: all .5s linear;
+}
+
+#space {
+  padding-top: 50px;
+}
+
+.highlight:hover {
+  color: black !important;
+  background-color: rgba(216, 202, 191, .95);
+  text-decoration: none;
+  font-weight: 800;
 }
 
 .upward {
-  border-radius: 55%;
+  height: 100px;
+  width: 100px;
+  display: block;
+  position: fixed;
+  right: 5%;
+  bottom: 40%; 
+  z-index:10;
+  border-radius: 50%;
   border: 1px solid white;
   box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, .3);
 }
@@ -199,11 +240,6 @@ h1 {
   margin: 0;
 }
 
-h1:hover {
-  background-color: #96daf4;
-  
-}
-
 h2 {
   font-family: "Open Sans Condensed";
   font-size: 30px;
@@ -213,16 +249,24 @@ h2 {
 
 h3 {
   font-family: "Peaches";
-  font-size: 50px;
+  text-align: center;
+  background-color: rgba(216, 202, 191, .95);
+  padding-left: 30px;
+  color: white;
+  font-size: 140px;
+  text-shadow: 0px 2px 3px black;
+  padding-bottom: 30px;
+  box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, .3);
 }
 
 p {
   font-family: 'Open Sans';
   font-size: 20px;
+  line-height: 40px;
 }
 
 .contact-wrapper {
-  height: 400px !important;
+  min-height: 100%;
   background-color: #96daf4;
   padding: 0;
   margin: 0;
@@ -230,8 +274,8 @@ p {
 
 .welcome {
   text-align: middle;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
   margin-top: 40px;
 }
 
@@ -250,16 +294,19 @@ form {
 }
 
 .basil {
-  bottom: -300px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  bottom: 35px !important;
   float:right;
-  padding-left: 5%;
+  padding-left: 65%;
 }
 
 .basil:hover { 
-  -webkit-transition-duration: 30s;
-  -webkit-transform: translate(80px,-300px) scale(.01);
-  -moz-transform: translate(80px,-300px) scale(.01);
-  transform: translate(80px,-300px) scale(.01);
+  -webkit-transition-duration: 15s;
+  -webkit-transform: translate(80px,-600px) scale(.1);
+  -moz-transform: translate(80px,-600px) scale(.1);
+  transform: translate(80px,-600px) scale(.1);
 }
 
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
@@ -349,6 +396,22 @@ h2 {
   border: 1px solid white;
   box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, .3);
 }
+
+.upward {
+  height: 100px;
+  width: 100px;
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  left: 10px; 
+  z-index:10;
+  border-radius: 50%;
+  border: 1px solid white;
+  box-shadow: 0px 2px 15px 2px rgba(0, 0, 0, .3);
+}
+
+
 
 
   
