@@ -42,8 +42,8 @@
 <div class="image-wrapper">
     <div ng-controller="Portfolio.controller">
   <div style="height: 305px">
-    <carousel class='slider' interval="myInterval" ng-click='showSlide()'>
-      <slide class='slider2' ng-repeat="slide in slides">
+    <carousel class='slider' interval="myInterval">
+      <slide class='slider2' ng-repeat="slide in slides" ng-click='showSlide()'>
             <img ng-src="{{slide}}" style="margin:auto; width: 100%; height: auto;">
       </slide>
     </carousel>
