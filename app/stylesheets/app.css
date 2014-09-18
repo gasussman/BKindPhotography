@@ -144,8 +144,6 @@ html {
   visibility: hidden; 
 }
 
-
-
 .modal-dialog {
   width: 100%;
   padding: 10px;
@@ -230,7 +228,7 @@ p a:hover {
 
 @font-face {
     font-family: "Peaches";
-    src: url("/app/assets/fonts/PeachesAndCream_Regular.otf") format("opentype");
+    src: url("/fonts/PeachesAndCream_Regular.otf") format("opentype");
 }
 
 .wrap {
@@ -299,7 +297,6 @@ form {
   padding: 20px 40px 10% 40px;
   border-radius: 5%;
 }
-
 
 .form-group label {
   font-family: "Open Sans Condensed";

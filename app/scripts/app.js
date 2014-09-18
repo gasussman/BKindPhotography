@@ -1,3 +1,6 @@
+require('./modernizr.custom.26633');
+require('./jquery.gridrotator');
+
 bKind = angular.module('bKind', ['ui.router', 'ui.bootstrap', 'ui.config']);
  
 bKind.config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) {
@@ -5,24 +8,24 @@ bKind.config(['$stateProvider', '$locationProvider', function($stateProvider, $l
 
    $stateProvider.state('landing', {
      url: '/',
-     templateUrl: 'app/assets/templates/landing.html'   
+     templateUrl: '/templates/landing.html'   
    });
 
    $stateProvider.state('portfolio', {
      url: '/portfolio',
-     templateUrl: '/app/assets/templates/portfolio.html',
+     templateUrl: '/templates/portfolio.html',
      controller: 'Portfolio.controller'
    })
 
    $stateProvider.state('aboutme', {
      url: '/aboutme',
-     templateUrl: 'app/assets/templates/aboutme.html',
+     templateUrl: '/templates/aboutme.html',
      controller: 'Aboutme.controller'
    });
 
    $stateProvider.state('contact', {
      url: '/contact',
-     templateUrl: 'app/assets/templates/contact.html'
+     templateUrl: '/templates/contact.html'
    });
 
 }]);
@@ -49,64 +52,63 @@ bKind.config(['$stateProvider', '$locationProvider', function($stateProvider, $l
      onhover : true
    } );
 
+   $scope.slides = [
+     '../images/basil_1.jpg',
+     '../images/picture_1.jpg',
+     '../images/picture_2.jpg',
+     '../images/basil_2.jpg',
+     '../images/picture_3.jpg',
+     '../images/picture_4.jpg',
+     '../images/basil_3.jpg',
+     '../images/picture_5.jpg',
+     '../images/picture_6.jpg',
+     '../images/basil_4.jpg',
+     '../images/picture_7.jpg',
+     '../images/picture_8.jpg',
+     '../images/basil_5.jpg',
+     '../images/picture_9.jpg',
+     '../images/picture_10.jpg',
+     '../images/basil_6.jpg',
+     '../images/picture_11.jpg',
+     '../images/picture_12.jpg',
+     '../images/basil_7.jpg',
+     '../images/picture_13.jpg',
+     '../images/picture_14.jpg',
+     '../images/basil_8.jpg',
+     '../images/picture_15.jpg',
+     '../images/picture_16.jpg',
+     '../images/basil_9.jpg',
+     '../images/picture_17.jpg',
+     '../images/basil_10.jpg',
+     '../images/picture_18.jpg',
+     '../images/basil_11.jpg',
+     '../images/picture_19.jpg',
+     '../images/picture_20.jpg',
+     '../images/basil_12.jpg',
+     '../images/picture_21.jpg',
+     '../images/picture_22.jpg',
+     '../images/basil_14.jpg',
+     '../images/picture_23.jpg',
+     '../images/basil_13.jpg',
+     '../images/picture_24.jpg',
+     '../images/basil_15.jpg',
+     '../images/picture_25.jpg',
+     '../images/basil_16.jpg',
+     '../images/picture_26.jpg',
+     '../images/basil_17.jpg',
+     '../images/basil_18.jpg'
+   ];
+
    $scope.myInterval = 5000;
     var slides = $scope.slides;
 
-   $scope.slides = [
-     '/app/assets/images/basil_1.jpg',
-     '/app/assets/images/picture_1.jpg',
-     '/app/assets/images/picture_2.jpg',
-     '/app/assets/images/basil_2.jpg',
-     '/app/assets/images/picture_3.jpg',
-     '/app/assets/images/picture_4.jpg',
-     '/app/assets/images/basil_3.jpg',
-     '/app/assets/images/picture_5.jpg',
-     '/app/assets/images/picture_6.jpg',
-     '/app/assets/images/basil_4.jpg',
-     '/app/assets/images/picture_7.jpg',
-     '/app/assets/images/picture_8.jpg',
-     '/app/assets/images/basil_5.jpg',
-     '/app/assets/images/picture_9.jpg',
-     '/app/assets/images/picture_10.jpg',
-     '/app/assets/images/basil_6.jpg',
-     '/app/assets/images/picture_11.jpg',
-     '/app/assets/images/picture_12.jpg',
-     '/app/assets/images/basil_7.jpg',
-     '/app/assets/images/picture_13.jpg',
-     '/app/assets/images/picture_14.jpg',
-     '/app/assets/images/basil_8.jpg',
-     '/app/assets/images/picture_15.jpg',
-     '/app/assets/images/picture_16.jpg',
-     '/app/assets/images/basil_9.jpg',
-     '/app/assets/images/picture_17.jpg',
-     '/app/assets/images/basil_10.jpg',
-     '/app/assets/images/picture_18.jpg',
-     '/app/assets/images/basil_11.jpg',
-     '/app/assets/images/picture_19.jpg',
-     '/app/assets/images/picture_20.jpg',
-     '/app/assets/images/basil_12.jpg',
-     '/app/assets/images/picture_21.jpg',
-     '/app/assets/images/picture_22.jpg',
-     '/app/assets/images/basil_14.jpg',
-     '/app/assets/images/picture_23.jpg',
-     '/app/assets/images/basil_13.jpg',
-     '/app/assets/images/picture_24.jpg',
-     '/app/assets/images/basil_15.jpg',
-     '/app/assets/images/picture_25.jpg',
-     '/app/assets/images/basil_16.jpg',
-     '/app/assets/images/picture_26.jpg',
-     '/app/assets/images/basil_17.jpg',
-     '/app/assets/images/basil_18.jpg'
-   ];
-
-   $scope.showSlide = function () {
+      $scope.showSlide = function () {
       var src = $('.slider2.active img').attr("src");
       var img= $('<img src="'  + src + '" >');
       $('#myModal .modal-body').empty();
       $('#myModal .modal-body').append(img);
       $('#myModal').modal();
    }
-
  }]);
 
 bKind.controller('Aboutme.controller', ['$scope', function($scope) {
@@ -122,23 +124,6 @@ $scope.basilPic = false;
 $scope.chickenPic = false;
 
 $scope.nostalgiaPic = false;
-
-}]);
-
-bKind.controller('Contact.controller', ['$scope', function($scope) {
-  $scope.myForm = {};
-  $scope.myForm.name = "name";
-  $scope.myForm.email  = "email";
-  $scope.myForm.message  = "message";
-
-  $scope.myForm.submitTheForm = function(item, event) {
-       console.log("--> Submitting form");
-       var dataObject = {
-          name : $scope.myForm.name,
-          email  : $scope.myForm.email,
-          message : $scope.myForm.message
-       };
-     };
 
 }]);
 
