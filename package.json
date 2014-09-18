@@ -1,13 +1,18 @@
 {
-  "author": "Bloc",
-  "name": "bloc-rdio-skeleton",
-  "description": "Starter skeleton for Bloc's Rdio project.",
-  "version": "0.0.1",
-  "homepage": "",
+  "name": "bkindphotography",
+  "version": "0.0.0",
+  "description": "wensite",
+  "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Bloc/bloc-jamz-checkpoint-outline"
+    "url": "https://github.com/gasussman/BKindPhotography.git"
   },
+  "author": "Garrett Sussman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gasussman/BKindPhotography/issues"
+  },
+  "homepage": "https://github.com/gasussman/BKindPhotography",
   "engines": {
     "node": "0.10"
   },
@@ -61,6 +66,11 @@
     "karma-chrome-launcher": "~0.1.4",
     "karma-growl-reporter": "~0.1.1",
     "karma-chai": "~0.1.0",
-    "karma-requirejs": "~0.2.2"
+    "karma-requirejs": "~0.2.2",
+    "grunt": "~0.4.5",
+    "grunt-contrib-connect": "~0.8.0",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-watch": "~0.6.0",
+    "grunt-open": "0.2.3"
   }
 }
